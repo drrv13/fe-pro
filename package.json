@@ -1,0 +1,23 @@
+{
+  "name": "fe-pro",
+  "version": "1.0.0",
+  "description": "home-work",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drrv13/fe-pro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drrv13/fe-pro/issues"
+  },
+  "homepage": "https://github.com/drrv13/fe-pro#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp.spritesmith": "^6.5.1"
+  }
+}
