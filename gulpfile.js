@@ -31,21 +31,28 @@ gulp.task('pug',function(){
 	return gulp.src(['src/pug/**/*.pug','!src/pug/**/_*.pug)'])
 		.pipe(pug({pretty:'\t'}))
 		.on("error", notify.onError())
-		.pipe(gulp.dest('app'));
-})
+		.pipe(gulp.dest('app'))
+});
 
 
 
 
 gulp.task('sass',function(){
 	gulp.src('.src/scss/**/*.scss')
-	.pipe(sass(.on("error", notify.onError())))
+	.pipe(sass().on("error", notify.onError()))
 	.pipe(gulp.dest('app/css'))
-	
+
 });
+
+
+// gulp.task('sass',function (){
+// 	return gulp.src('src/scss/**/*.scss')
+// 		.pipe(sass({includePaths:bourbon.includePaths}))
+// 		.on("error",notify.onError())
+// })
 
 gulp.task('watch',function(){
 	gulp.watch('src/pug/**/*.pug',['pug']);
 	gulp.watch('src.scss/**/*.scss',['sass']);
-	gulp.watch('app/*.html',browserSync.reload);
-})
+	//gulp.watch('app/*.html',browserSync.reload);
+});
